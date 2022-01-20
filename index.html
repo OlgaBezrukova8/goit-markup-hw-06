@@ -368,7 +368,6 @@
     <section class="section clients">
       <div class="container clients-container">
         <h2 class="clients-title">Постоянные клиенты</h2>
-        <!-- <div class="clients-list-div"> -->
         <ul class="list clients-list">
           <li class="clients-item">
             <a class="link clients-link-icon" href=""
@@ -407,7 +406,6 @@
             ></a>
           </li>
         </ul>
-        <!-- </div> -->
       </div>
     </section>
 
@@ -444,6 +442,7 @@
             </ul>
           </address>
         </div>
+
         <div class="footer-social-div">
           <p class="footer-text">присоединяйтесь</p>
           <ul class="list footer-social-list">
@@ -474,6 +473,27 @@
             </li>
           </ul>
         </div>
+
+        <form class="footer-send" action="#">
+          <div class="footer-form-div">
+            <div class="footer-form-send">
+              <p class="footer-send-title">Подпишитесь на рассылку</p>
+              <input
+                class="input footer-form-input"
+                type="email"
+                name="user-send-email"
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="footer-button-div">
+              <button class="button footer-button-send" type="submit">
+                Подписаться<svg class="footer-btn-icon" width="24" height="24">
+                  <use href="images/icons.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </footer>
 
@@ -487,27 +507,81 @@
 
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
-        <form class="modal-form" action="#">
+        <form class="modal-form" action="#" autocomplete="off">
           <div class="modal-form-div">
-            <label class="modal-input-label" for="name">Имя</label>
-            <input type="name" name="name" required />
+            <label class="modal-input-label" for="user-name">Имя</label>
+            <input
+              class="input form-input"
+              type="text"
+              name="user-name"
+              id="user-name"
+            />
+            <svg class="form-icon" width="12" height="12">
+              <use href="images/icons.svg#icon-name"></use>
+            </svg>
           </div>
 
           <div class="modal-form-div">
-            <label class="modal-input-label" for="tel">Телефон</label>
-            <input type="tel" name="tel" />
+            <label class="modal-input-label" for="user-tel">Телефон</label>
+            <input
+              class="input form-input"
+              type="tel"
+              name="user-tel"
+              id="user-tel"
+            />
+            <svg class="form-icon" width="13" height="13">
+              <use href="images/icons.svg#icon-tel"></use>
+            </svg>
           </div>
 
           <div class="modal-form-div">
-            <label class="modal-input-label" for="email">Почта</label>
-            <input type="email" />
+            <label class="modal-input-label" for="user-email">Почта</label>
+            <input
+              class="input form-input"
+              type="email"
+              name="user-email"
+              id="user-email"
+            />
+            <svg class="form-icon form-icon-email" width="15" height="12">
+              <use href="images/icons.svg#icon-email"></use>
+            </svg>
           </div>
 
           <div class="modal-form-div form-comment">
-            <label class="modal-input-label" for="comment">Комментарий</label>
-            <textarea name="user-text" placeholder="Введите текст"></textarea>
+            <label class="modal-input-label" for="user-text">Комментарий</label>
+            <textarea
+              class="input form-input form-text"
+              name="user-text"
+              placeholder="Введите текст"
+              id="user-text"
+            ></textarea>
           </div>
-          <button type="submit">Отправить</button>
+
+          <div class="modal-form-checkbox">
+            <label class="form-text-checkbox" for="user-checkbox">
+              <input
+                class="input form-checkbox"
+                type="checkbox"
+                value="license"
+                name="user-checkbox"
+                id="user-checkbox"
+              />
+              <span class="form-text-icon"> </span>
+              Соглашаюсь с рассылкой и принимаю
+
+              <span class="form-checkbox-span"
+                ><a class="checkbox-span-link" href=""
+                  >Условия договора</a
+                ></span
+              >
+            </label>
+          </div>
+
+          <div class="form-button">
+            <button class="button form-button-submit" type="submit">
+              Отправить
+            </button>
+          </div>
         </form>
       </div>
     </div>
