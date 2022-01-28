@@ -25,36 +25,38 @@
     <!-- header -->
 
     <header class="header">
-      <div class="container header-container">
-        <nav class="header-nav">
-          <a class="header-logo link" href="/index.html"
-            ><span class="header-colortext">Web</span>Studio</a
+      <div class="container header__container">
+        <nav class="nav">
+          <a class="logo link" href="/index.html"
+            ><span class="logo__text">Web</span>Studio</a
           >
 
-          <ul class="list header-list">
-            <li class="header-item">
-              <a class="link header-link current" href="./index.html">Студия</a>
+          <ul class="list page__list">
+            <li class="page__item">
+              <a class="link page__link page__link--after" href="./index.html"
+                >Студия</a
+              >
             </li>
-            <li class="header-item">
-              <a class="link header-link" href="./portfolio.html">Портфолио</a>
+            <li class="page__item">
+              <a class="link page__link" href="./portfolio.html">Портфолио</a>
             </li>
-            <li class="header-item">
-              <a class="link header-link" href="">Контакты</a>
+            <li class="page__item">
+              <a class="link page__link" href="">Контакты</a>
             </li>
           </ul>
         </nav>
 
-        <ul class="list contacts-list">
-          <li class="header-item">
-            <a class="link header-icon-link" href="mailto:info@devstudio.com"
-              ><svg class="header-icon" width="16" height="12">
+        <ul class="list contacts__list">
+          <li class="contacts__item contacts__item--append">
+            <a class="link contacts__link" href="mailto:info@devstudio.com"
+              ><svg class="contacts__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-mail"></use></svg
               >info@devstudio.com</a
             >
           </li>
-          <li class="header-item">
-            <a class="link header-icon-link" href="tel:+380961111111">
-              <svg class="header-icon" width="10" height="16">
+          <li class="contacts__item">
+            <a class="link contacts__link" href="tel:+380961111111">
+              <svg class="contacts__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use></svg
               >+38 096 111 11 11</a
             >
@@ -67,12 +69,12 @@
       <!-- hero block -->
 
       <section class="hero">
-        <div class="container">
-          <h1 class="hero-title">
+        <div class="container hero__container">
+          <h1 class="hero__title">
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="hero-btn" type="button" data-modal-open>
+          <button class="button hero-btn" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -406,7 +408,7 @@
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-address-div">
-          <a class="link footer-logo" href="/index.html"
+          <a class="link logo logo--inverse" href="/index.html"
             ><span class="footer-colortext">Web</span>Studio</a
           >
 
