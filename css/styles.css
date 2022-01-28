@@ -24,10 +24,6 @@ ol {
   list-style: none;
 }
 
-button {
-  cursor: pointer;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -113,22 +109,6 @@ body {
 .logo__text {
   color: var(--accent-color);
 }
-
-/* добавить в футер */
-
-.logo--inverse {
-  color: var(--primary-white-color);
-  margin-bottom: 20px;
-}
-
-/* .footer-logo {
-  display: block;
-  margin-bottom: 20px;
-
-  font-family: Raleway;
-  font-size: 26px;
-  line-height: 1.19;
-} */
 
 .page__list {
   display: flex;
@@ -282,74 +262,32 @@ body {
   border-radius: 4px;
   border: none;
 
+  cursor: pointer;
+
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-btn {
+.hero__btn {
   padding: 10px 32px;
-  /* justify-content: center;
-
-  text-align: center; */
-  /* border-width: 0px; */
-  border-radius: 4px;
-  border: none;
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-
-  font-weight: bold;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
 }
 
-.footer-button-send {
-  display: flex;
-  align-items: center;
-
-  padding: 10px 29px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
-
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-btn:hover,
-.hero-btn:focus {
+.hero__btn:hover,
+.hero__btn:focus {
   background-color: var(--background-accent-btn);
 }
 
-/* customizing styles about block */
+/***** customizing styles about, advantages and svg-div blocks *****/
 
+/* block about */
 .about {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.about-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.about-list .about-item + .about-item {
-  margin-left: 30px;
-}
-
-.about-title {
+.about__title--hidden {
   /* hide the title */
   position: absolute;
   width: 1px;
@@ -361,7 +299,24 @@ body {
   clip: rect(0 0 0 0);
 }
 
-.about-icon-div {
+/* block advantages */
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages__item--append {
+  margin-right: 30px;
+}
+
+.advantages__item--preperend {
+  margin-right: 0;
+}
+
+/* block svg-div */
+
+.svg-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,7 +330,7 @@ body {
   border-radius: 4px;
 }
 
-.about-second-title {
+.advantages__title {
   margin-bottom: 10px;
 
   font-size: 14px;
@@ -383,10 +338,10 @@ body {
   text-transform: uppercase;
 }
 
-.about-after-title {
-  color: var(--paragraph-color);
-
+.advantages__text {
   line-height: 1.5;
+
+  color: var(--paragraph-color);
 }
 
 /* customizing styles activity block */
@@ -395,7 +350,7 @@ body {
   padding-top: 0;
 }
 
-.activity-title {
+.activity__title {
   margin-bottom: 50px;
 
   font-size: 36px;
@@ -403,20 +358,26 @@ body {
   text-align: center;
 }
 
-.activity-list {
+/* development block */
+
+.development__list {
   display: flex;
   align-items: center;
 }
 
-.activity-list .activity-item + .activity-item {
-  margin-left: 30px;
+.development__item--append {
+  margin-right: 30px;
 }
 
-.activity-main-position {
+.development__item--prepend {
+  margin-right: 0;
+}
+
+.picture-box {
   position: relative;
 }
 
-.activity-text {
+.picture__text {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -425,40 +386,44 @@ body {
   padding: 27px;
 
   font-weight: bold;
+  letter-spacing: 0.03em;
   line-height: 1.14;
   text-align: center;
-  justify-content: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: var(--primary-white-color);
   background: rgba(47, 48, 58, 0.8);
 }
+
 /* customizing styles team block */
 
 .team {
   background-color: var(--background-btn-color);
 }
 
-.team-title {
+.team__title {
   margin-bottom: 50px;
 
   font-size: 36px;
-  line-height: 42px;
+  line-height: calc(42 / 36);
   text-align: center;
 }
 
-.team-list {
+.employee {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.team-list .team-item + .team-item {
-  margin-left: 30px;
+.employee__item--append {
+  margin-right: 30px;
 }
 
-.team-item {
+.employee__item--prepend {
+  margin-right: 0;
+}
+
+.employee__item {
   background-color: var(--primary-white-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -466,12 +431,12 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-div {
+.description {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.team-second-title {
+.description__title {
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -480,7 +445,7 @@ body {
   text-align: center;
 }
 
-.team-after-title {
+.description__text {
   margin-bottom: 16px;
 
   color: var(--paragraph-color);
@@ -490,22 +455,20 @@ body {
   text-align: center;
 }
 
-.team-social-list {
+.social-networks {
   display: flex;
   justify-content: center;
 }
 
-.team-social-item + .team-social-item {
-  margin-left: 10px;
+.social-networks__item--append {
+  margin-right: 10px;
 }
 
-.team-social-icon {
-  fill: var(--icon-color);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.social-networks__item--prepend {
+  margin-right: 0;
 }
 
-.team-social-link {
+.social-networks__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -517,67 +480,73 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-social-link:hover,
-.team-social-link:focus {
+.social-networks__link:hover,
+.social-networks__link:focus {
   background-color: var(--accent-color);
 }
 
-.team-social-link:hover .team-social-icon,
-.team-social-link:focus .team-social-icon {
+.social-networks__link:hover .social-networks__icon,
+.social-networks__link:focus .social-networks__icon {
   fill: var(--primary-white-color);
+}
+
+.social-networks__icon {
+  fill: var(--icon-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* customizing styles clients */
 
-.clients-title {
+.clients-box__title {
   text-align: center;
   margin-bottom: 50px;
 
   font-size: 36px;
-  line-height: 42px;
+  line-height: calc(42 / 36);
   letter-spacing: 0.03em;
 }
 
-.clients-list {
+.brand {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.clients-link-icon {
+.brand__item--append {
+  margin-right: 30px;
+}
+
+.brand__link {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
 
   width: 170px;
   height: 92px;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 
-  fill: var(--icon-color);
-}
-
-.clients-company-icon {
   fill: var(--icon-color);
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link-icon:hover,
-.clients-link-icon:focus {
+.brand__icon {
+  fill: var(--icon-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand__link:hover,
+.brand__link:focus {
   border: 1px solid var(--accent-color);
 }
 
-.clients-link-icon:hover .clients-company-icon,
-.clients-link-icon:focus .clients-company-icon {
+.brand__link:hover .brand__icon,
+.brand__link:focus .brand__icon {
   fill: var(--accent-color);
-}
-
-.clients-item + .clients-item {
-  margin-left: 30px;
 }
 
 /* customizing styles footer */
@@ -589,61 +558,56 @@ body {
   background-color: var(--accent-background-color);
 }
 
-.footer-container {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
 
-.footer-address-div:not(:last-child) {
+.address-box:not(:last-child) {
   margin-right: 70px;
 }
 
-.footer-colortext {
-  color: var(--accent-color);
-}
-
-/* .footer-logo {
-  display: block;
+.logo--inverse {
   margin-bottom: 20px;
 
   color: var(--primary-white-color);
+}
 
-  font-family: Raleway;
-  font-size: 26px;
-  line-height: 1.19;
-} */
-
-.footer-contact:focus {
+.logo__text--accent-color {
   color: var(--accent-color);
 }
 
-.footer-contact {
-  color: rgba(255, 255, 255, 0.6);
+.address__link:focus {
+  color: var(--accent-color);
+}
 
+.address__link {
   font-style: normal;
   line-height: 1.71;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-contact:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.add {
+.address__link--light-color {
   color: var(--primary-white-color);
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.add:hover,
-.add:focus {
+.address__link--light-color:hover,
+.address__link--light-color:focus {
   color: var(--accent-color);
 }
 
-.footer-social-div {
+.address__item--append {
+  margin-bottom: 9px;
+}
+
+.social-box {
   margin-right: 93px;
 }
 
-.footer-text {
+.social-box__text {
   margin-bottom: 20px;
 
   font-weight: bold;
@@ -654,16 +618,16 @@ body {
   color: var(--primary-white-color);
 }
 
-.footer-social-list {
+.footer-social {
   display: flex;
   justify-content: center;
 }
 
-.footer-social-item + .footer-social-item {
-  margin-left: 10px;
+.footer-social__item--append {
+  margin-right: 10px;
 }
 
-.footer-social-link {
+.footer-social__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -671,13 +635,13 @@ body {
   padding: 15px;
 }
 
-.footer-social-icon {
+.footer-social__icon {
   fill: var(--primary-white-color);
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-item {
+.footer-social__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -691,20 +655,22 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-social-item:hover,
-.footer-social-item:focus {
+.footer-social__item:hover,
+.footer-social__item:focus {
   background-color: var(--accent-color);
 }
 
-.footer-form-div {
+/* customizing styles footer-form */
+
+.footer-form-box {
   display: flex;
 }
 
-.footer-form-send {
+.footer-form {
   margin-right: 12px;
 }
 
-.footer-send-title {
+.footer-form__label {
   margin-bottom: 20px;
 
   font-weight: bold;
@@ -716,7 +682,7 @@ body {
   color: var(--primary-white-color);
 }
 
-.footer-form-input {
+.footer-form__input {
   padding-top: 15px;
   padding-left: 16px;
   padding-bottom: 15px;
@@ -735,47 +701,36 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-form-input:focus {
+.footer-form__input:focus {
   border-color: var(--header-border);
 }
 
-.footer-button-div {
+.button-box {
   display: flex;
   align-items: flex-end;
 }
 
-/* .footer-button-send {
+.button--styles {
   display: flex;
   align-items: center;
 
   padding: 10px 29px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
-
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
+}
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
-
-.footer-button-send:hover,
-.footer-button-send:focus {
+.button--styles:hover,
+.button--styles:focus {
   background-color: var(--background-accent-btn);
 }
 
-.footer-btn-icon {
+.button__icon {
   margin-left: 10px;
 
   fill: var(--primary-white-color);
 }
 
-/* modal */
+/* customizing styles modal */
 
 .backdrop-hidden {
   position: fixed;
@@ -825,18 +780,19 @@ body {
 }
 
 .modal-close {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-
-  width: 30px;
-  height: 30px;
-  align-items: center;
-  padding: 0;
-
   position: absolute;
   top: 8px;
   right: 8px;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  padding: 0;
+
+  width: 30px;
+  height: 30px;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 30px;
@@ -844,7 +800,7 @@ body {
   background-color: var(--primary-white-color);
 }
 
-.modal-btn-icon {
+.modal-close__icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -853,12 +809,12 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn-icon:hover,
-.modal-btn-icon:focus {
+.modal-close__icon:hover,
+.modal-close__icon:focus {
   fill: var(--accent-color);
 }
 
-.modal-title {
+.modal__title {
   margin-bottom: 12px;
 
   font-weight: bold;
@@ -868,21 +824,21 @@ body {
   text-align: center;
 }
 
-.modal-form .modal-form-div + .modal-form-div {
-  margin-top: 10px;
+.modal-form-box--appened {
+  margin-bottom: 10px;
 }
 
-.modal-form-div {
+.modal-form-box {
   position: relative;
 }
 
 /* меняем цвет бордера при фокусе в поле формы (2 способ)
 
-.modal-form-div:focus-within > .form-input {
+.modal-form__box:focus-within > .form-input {
   border: 1px solid var(--accent-color);
 } */
 
-.modal-input-label {
+.label-contact {
   display: block;
 
   margin-bottom: 4px;
@@ -894,7 +850,7 @@ body {
   color: var(--paragraph-color);
 }
 
-.form-input {
+.input-contact {
   padding: 12px 16px;
   padding-left: 42px;
 
@@ -908,22 +864,16 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus {
+.input-contact:focus {
   border: 1px solid var(--accent-color);
 }
 
 /* при фокусе иконка меняет цвет (выбираются все классы form-icon) */
-.form-input:focus ~ .form-icon {
+.input-contact:focus ~ .form-icon {
   fill: var(--accent-color);
 }
 
-.form-icon {
-  position: absolute;
-  top: 55%;
-  left: 15px;
-}
-
-.form-text {
+.input-contact--refactoring {
   resize: none;
 
   width: 100%;
@@ -933,7 +883,7 @@ body {
   margin-bottom: 20px;
 }
 
-.form-text::placeholder {
+.input-contact__textarea::placeholder {
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
@@ -941,14 +891,20 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-form-checkbox {
+.form-icon {
+  position: absolute;
+  top: 55%;
+  left: 15px;
+}
+
+.modal-checkbox {
   display: flex;
   align-items: center;
 
   margin-bottom: 30px;
 }
 
-.form-text-checkbox {
+.label-checkbox {
   display: inline-flex;
   align-items: center;
 
@@ -961,7 +917,7 @@ body {
   color: var(--paragraph-color);
 }
 
-.form-checkbox {
+.input-checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -971,16 +927,19 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-text-icon {
-  border: 2px solid var(--primary-text-color);
+.modal-checkbox__text {
+  display: inline-block;
+
+  margin-right: 9px;
+
   width: 16px;
   height: 15px;
+
+  border: 2px solid var(--primary-text-color);
   border-radius: 2px;
-  display: inline-block;
-  margin-right: 9px;
 }
 
-.form-checkbox:checked + .form-text-icon {
+.input-checkbox:checked + .modal-checkbox__text {
   background-image: url(../images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
@@ -988,18 +947,19 @@ body {
   border: none;
 }
 
-.form-checkbox-span {
+.modal-checkbox__box {
   position: relative;
 
   margin-left: 4px;
 }
 
-.checkbox-span-link {
-  color: var(--accent-color);
+.modal-checkbox__link {
   text-decoration: none;
+
+  color: var(--accent-color);
 }
 
-.checkbox-span-link::after {
+.modal-checkbox__link::after {
   content: "";
   position: absolute;
 
@@ -1015,7 +975,7 @@ body {
   text-align: center;
 }
 
-.form-button-submit {
+.button__submit {
   text-align: center;
   align-items: center;
 
@@ -1026,18 +986,18 @@ body {
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
 
-  background: var(--accent-color);
-  color: var(--primary-white-color);
-
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
 
+  background: var(--accent-color);
+  color: var(--primary-white-color);
+
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-button-submit:hover,
-.form-button-submit:focus {
+.button__submit:hover,
+.button__submit:focus {
   background-color: var(--background-accent-btn);
 }
 
@@ -1045,7 +1005,9 @@ body {
 
 /* customizing styles portfolio page */
 
-.portfolio-title {
+/* --- add modifier --hidden in HTML --- */
+
+.portfolio-title--hidden {
   /* hide the title */
   position: absolute;
   width: 1px;
